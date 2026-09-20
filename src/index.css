@@ -1,0 +1,198 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: #101016;
+    color: #e2e8f0;
+    font-family: 'Outfit', sans-serif;
+  }
+
+  /* Minecraft custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #1c1c1c;
+    border: 2px solid #383838;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #5b8731;
+    border: 2px solid #866043;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #72b036;
+  }
+}
+
+@layer utilities {
+  /* Minecraft Classic Text Shadows */
+  .mc-text-shadow {
+    text-shadow: 2px 2px 0px #000;
+  }
+
+  .mc-xp-text {
+    color: #7fff00;
+    text-shadow: 2px 2px 0px #1a3800, -1px -1px 0px #1a3800, 1px -1px 0px #1a3800, -1px 1px 0px #1a3800;
+  }
+
+  .mc-gold-text {
+    color: #fdb813;
+    text-shadow: 2px 2px 0px #4d3300;
+  }
+
+  .mc-diamond-text {
+    color: #4dedf4;
+    text-shadow: 2px 2px 0px #0d4246;
+  }
+
+  .mc-redstone-text {
+    color: #ff3311;
+    text-shadow: 2px 2px 0px #4d0000;
+  }
+
+  /* Minecraft Pixel Border Boxes */
+  .mc-card {
+    background: #1e1d24;
+    border: 3px solid #3f3e4d;
+    box-shadow: 
+      inset 3px 3px 0px rgba(255, 255, 255, 0.12),
+      inset -3px -3px 0px rgba(0, 0, 0, 0.6),
+      0 8px 0px rgba(0, 0, 0, 0.4);
+    position: relative;
+  }
+
+  .mc-card:hover {
+    border-color: #55ff55;
+    box-shadow: 
+      inset 3px 3px 0px rgba(85, 255, 85, 0.2),
+      inset -3px -3px 0px rgba(0, 0, 0, 0.6),
+      0 8px 0px rgba(0, 0, 0, 0.5),
+      0 0 15px rgba(85, 255, 85, 0.3);
+  }
+
+  /* Minecraft Inventory Slot */
+  .mc-slot {
+    background: #25242d;
+    border: 2px solid #000000;
+    box-shadow: 
+      inset 2px 2px 0px #0c0c0e,
+      inset -2px -2px 0px #4a485a;
+  }
+
+  /* Authentic Minecraft Beveled Buttons */
+  .mc-btn {
+    font-family: 'Silkscreen', monospace;
+    letter-spacing: 0.05em;
+    background: #4a4957;
+    border: 2px solid #000000;
+    box-shadow: 
+      inset 2px 2px 0px #868499,
+      inset -2px -2px 0px #24232c,
+      0 4px 0px #000000;
+    transition: all 0.1s ease-in-out;
+    text-shadow: 1px 1px 0px #000;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .mc-btn:hover {
+    background: #5b5a6b;
+    border-color: #ffffff;
+    box-shadow: 
+      inset 2px 2px 0px #9f9db4,
+      inset -2px -2px 0px #24232c,
+      0 4px 0px #000000;
+  }
+
+  .mc-btn:active {
+    transform: translateY(3px);
+    box-shadow: 
+      inset 2px 2px 0px #1a1920,
+      inset -2px -2px 0px #5a5868,
+      0 1px 0px #000000;
+  }
+
+  /* Minecraft Green / Wood Buttons */
+  .mc-btn-green {
+    font-family: 'Silkscreen', monospace;
+    background: #4a7726;
+    border: 2px solid #000000;
+    box-shadow: 
+      inset 2px 2px 0px #7ab73f,
+      inset -2px -2px 0px #254011,
+      0 4px 0px #000000;
+    text-shadow: 1px 1px 0px #000;
+  }
+
+  .mc-btn-green:hover {
+    background: #5b8f30;
+    box-shadow: 
+      inset 2px 2px 0px #90d34e,
+      inset -2px -2px 0px #254011,
+      0 4px 0px #000000;
+  }
+
+  .mc-btn-green:active {
+    transform: translateY(3px);
+    box-shadow: 
+      inset 2px 2px 0px #1a3009,
+      inset -2px -2px 0px #5b8f30,
+      0 1px 0px #000000;
+  }
+
+  /* Minecraft Diamond Button */
+  .mc-btn-diamond {
+    font-family: 'Silkscreen', monospace;
+    background: #248f95;
+    border: 2px solid #000000;
+    box-shadow: 
+      inset 2px 2px 0px #4dedf4,
+      inset -2px -2px 0px #0f4a4e,
+      0 4px 0px #000000;
+    text-shadow: 1px 1px 0px #000;
+  }
+
+  .mc-btn-diamond:hover {
+    background: #2cb2b9;
+    box-shadow: 
+      inset 2px 2px 0px #7bf5fa,
+      inset -2px -2px 0px #0f4a4e,
+      0 4px 0px #000000,
+      0 0 15px rgba(77, 237, 244, 0.4);
+  }
+
+  /* Pixel grid pattern for Minecraft atmosphere */
+  .mc-bg-pattern {
+    background-color: #101016;
+    background-image: 
+      linear-gradient(rgba(255, 255, 255, 0.02) 2px, transparent 2px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.02) 2px, transparent 2px);
+    background-size: 32px 32px;
+  }
+
+  /* Minecraft Experience Bar */
+  .mc-xp-bar {
+    height: 12px;
+    background: #000000;
+    border: 2px solid #383838;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .mc-xp-fill {
+    height: 100%;
+    background: linear-gradient(180deg, #b8ff43 0%, #7fff00 50%, #46aa00 100%);
+    box-shadow: 0 0 8px #7fff00;
+    transition: width 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+}

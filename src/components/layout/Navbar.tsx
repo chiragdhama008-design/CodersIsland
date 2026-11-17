@@ -48,8 +48,9 @@ export const Navbar: React.FC = () => {
 
   const navLinks = [
     { name: 'Spawn Point', path: '/' },
+    { name: 'Batches (₹999+)', path: '/batches', isPill: true },
     { name: 'Island Biomes', path: '/learn' },
-    { name: 'Quests', path: '/learn' },
+    { name: 'About Us', path: '/about' },
   ];
 
   const isActive = (path: string) => {
@@ -95,13 +96,18 @@ export const Navbar: React.FC = () => {
               <Link
                 key={idx}
                 to={link.path}
-                className={`px-4 py-1.5 text-xs font-silkscreen tracking-wide transition-all ${
+                className={`px-3 py-1.5 text-xs font-silkscreen tracking-wide transition-all flex items-center gap-1.5 ${
                   isActive(link.path)
                     ? 'bg-[#4a7726] text-white border-2 border-[#7ab73f] shadow-[inset_1px_1px_0px_#90d34e] mc-text-shadow'
+                    : link.isPill
+                    ? 'text-[#fdb813] hover:text-white hover:bg-[#34333f]'
                     : 'text-[#a0a0a0] hover:text-white hover:bg-[#34333f]'
                 }`}
               >
-                {link.name}
+                {link.isPill && !isActive(link.path) && (
+                  <span className="w-1.5 h-1.5 bg-[#fdb813] border border-black animate-pulse" />
+                )}
+                <span>{link.name}</span>
               </Link>
             ))}
           </nav>

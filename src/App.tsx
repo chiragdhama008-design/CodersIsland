@@ -7,6 +7,8 @@ import { LandingPage } from './pages/LandingPage';
 import { LearnPage } from './pages/LearnPage';
 import { WeekPage } from './pages/WeekPage';
 import { TopicPage } from './pages/TopicPage';
+import { BatchesPage } from './pages/BatchesPage';
+import { AboutPage } from './pages/AboutPage';
 import { AdminPage } from './pages/AdminPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 
@@ -36,6 +38,10 @@ export const App: React.FC = () => {
         <main className="flex-grow z-10">
           <Routes>
             <Route path="/" element={<LandingPage />} />
+            <Route path="/batches" element={<BatchesPage />} />
+            <Route path="/pricing" element={<BatchesPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/about-us" element={<AboutPage />} />
             <Route path="/learn" element={<LearnPage />} />
             <Route path="/week/:weekId" element={<WeekPage />} />
             <Route path="/topic/:topicId" element={<TopicPage />} />

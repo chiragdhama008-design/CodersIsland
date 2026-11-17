@@ -38,9 +38,19 @@ export const Footer: React.FC = () => {
           <div className="space-y-2.5">
             <h4 className="font-pixel text-[10px] uppercase text-[#fdb813] mc-gold-text flex items-center gap-1.5">
               <Compass className="w-3.5 h-3.5" />
-              <span>Island Biomes</span>
+              <span>Wings & Biomes</span>
             </h4>
             <ul className="space-y-1.5 font-silkscreen text-xs text-[#a0a0a0]">
+              <li>
+                <Link to="/batches" className="text-[#fdb813] hover:text-[#55ff55] transition-colors flex items-center gap-1">
+                  <span>★ Batches (₹999 / ₹1,199)</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="text-[#4dedf4] hover:text-white transition-colors">
+                  About Us (PEC Founders)
+                </Link>
+              </li>
               <li>
                 <Link to="/learn" className="hover:text-[#55ff55] transition-colors">
                   All 5 Island Biomes
@@ -49,16 +59,6 @@ export const Footer: React.FC = () => {
               <li>
                 <Link to="/week/week-1" className="hover:text-[#55ff55] transition-colors">
                   Biome 1: Overworld Logic
-                </Link>
-              </li>
-              <li>
-                <Link to="/week/week-2" className="hover:text-[#55ff55] transition-colors">
-                  Biome 2: Crafting HTML/CSS
-                </Link>
-              </li>
-              <li>
-                <Link to="/week/week-3" className="hover:text-[#55ff55] transition-colors">
-                  Biome 3: Redstone JavaScript
                 </Link>
               </li>
               <li>

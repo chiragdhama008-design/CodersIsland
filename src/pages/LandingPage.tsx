@@ -467,7 +467,7 @@ export const LandingPage: React.FC = () => {
               to="/about"
               className="mc-btn mc-btn-green px-5 py-2.5 text-xs text-white shrink-0 flex items-center gap-1.5"
             >
-              <span>Read Crazy Quotes & Story</span>
+              <span>Read Quotes & Story</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>

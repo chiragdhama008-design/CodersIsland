@@ -226,7 +226,7 @@ export const AboutPage: React.FC = () => {
                             : 'text-[#888] hover:text-white'
                         }`}
                       >
-                        Crazy Quote
+                        Quote
                       </button>
                       <button
                         onClick={() => setActiveTab({ ...activeTab, [member.id]: 'ai' })}
